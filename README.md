@@ -1,3 +1,3 @@
 # TicTacToe_MACE_Valentine
 
-Technical exercise for Dotscreen.
+Tic Tac Toe game using Javascript/HTML/CSS.
