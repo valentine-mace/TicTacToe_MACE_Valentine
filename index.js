@@ -116,7 +116,7 @@ function checkBoardWin() {
   // If nobody won, we check if the board still has empty cells
   if (!board.includes("")) {
     boardStatus.innerHTML = "Nobody won!";
-    return;
+    setTimeout(() => { restartGame(); }, 1000);
   }
 
   changePlayerTurn();
