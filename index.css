@@ -16,3 +16,21 @@ body {
   cursor: pointer;
   font-size: 50px;
 }
+
+.boardScores{
+  margin-left: 47%;
+}
+
+.arrows{
+  display: flex;
+}
+
+.arrowX{
+  margin-top: 20px;
+  margin-right: 10px;
+}
+
+.arrowO{
+  margin-top: 20px;
+  margin-right: 10px;
+}

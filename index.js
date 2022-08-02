@@ -4,8 +4,11 @@ const boardTimer = document.querySelector(".boardTimer");
 const boardTimerText = document.querySelector(".boardTimerText");
 const scoreXText = document.querySelector(".scoreX");
 const scoreOText = document.querySelector(".scoreO");
+const arrowX = document.querySelector(".arrowX");
+const arrowO = document.querySelector(".arrowO");
 
 let playerPawn = "X";
+arrowX.innerHTML = "➔";
 let board = ["", "", "", "", "", "", "", "", ""];
 
 // Scores
@@ -64,6 +67,8 @@ function displayPlayerPawn(cell, index) {
 // We restart the game
 function restartGame() {
   playerPawn = "X";
+  arrowX.innerHTML = "➔";
+  arrowO.innerHTML = "";
   board = ["", "", "", "", "", "", "", "", ""];
   document.querySelectorAll('.cell').forEach(cell => cell.innerHTML = "");
 }
@@ -72,9 +77,13 @@ function restartGame() {
 function changePlayerTurn() {
   if (playerPawn === "X") {
     playerPawn = "O";
+    arrowO.innerHTML = "➔";
+    arrowX.innerHTML = "";
   }
   else {
-    playerPawn = "X"
+    playerPawn = "X";
+    arrowX.innerHTML = "➔";
+    arrowO.innerHTML = "";
   }
   boardStatus.innerHTML = `${playerPawn}'s turn`;
 }
